@@ -1,0 +1,18 @@
+var form = document.createElement('form')
+var text_input = document.createElement('input')
+var id_input = document.createElement('input')
+var button = document.createElement('button')
+
+text_input.value = '<%= @comment.content %>'
+text_input.name = 'comment'
+id_input.hidden = true
+id_input.value = '<%= @comment.id %>'
+id_input.name = 'id'
+button.type = 'submit'
+button.innerText = 'Actualizar'
+
+form.appendChild(text_input)
+form.appendChild(id_input)
+form.appendChild(button)
+
+$('#update').append(form)
